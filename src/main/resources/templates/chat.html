@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Terminal</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            font-family: Consolas, monospace;
+        }
+        .terminal {
+            width: 80%;
+            max-width: 800px;
+            height: 400px;
+            background-color: #000;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #333;
+        }
+        .title-bar {
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .red { background-color: red; }
+        .yellow { background-color: yellow; }
+        .green { background-color: limegreen; }
+        .terminal{
+            display: flex;
+            flex-direction: column;
+        }
+        .output {
+            display: flex;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #00ff00;
+            width: 100%;
+            white-space: nowrap;
+            font-size: 14px;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        form{
+            width: 75%;
+        }
+        input {
+            all: unset;
+            width: 100%;
+            max-height: 20px;
+            box-sizing: border-box;
+            margin-left: 4px;
+        }
+        .loading{
+            position: absolute;
+            display: none;
+        }
+        .responseText{
+            color: white;
+            padding: 0 10px 10px 10px;
+            margin: 0;
+            box-sizing: border-box;
+            overflow: auto;
+            height: 100%;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:focus {
+            transition: background-color 600000s 0s, color 600000s 0s;
+        }
+        input[data-autocompleted] {
+            background-color: transparent !important;
+        }
+        .responseText::-webkit-scrollbar {
+            width: 6px;
+        }
+        .responseText::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .responseText::-webkit-scrollbar-thumb {
+            background: white;
+            border-radius: 4px;
+        }
+        .responseText::-webkit-scrollbar-thumb:hover {
+            background: #00cc00;
+        }
+
+    </style>
+</head>
+<body onclick="document.getElementById('input').focus();">
+<div class="terminal">
+    <div class="title-bar">
+        Ollama Terminal
+        <div class="buttons">
+            <div class="button red"></div>
+            <div class="button yellow"></div>
+            <div class="button green"></div>
+        </div>
+    </div>
+
+    <div class="output">
+        <span id="aMimir">A I.A está a mimir 😴...</span>
+        <span class="loading" id="loadingMessage">
+            Seu pc é lento... Aguarde 🤓💻...
+        </span>
+        <form th:action="@{/chat}" method="post" onsubmit="onSubmit()">
+            <input class="terminalInput" name="input" id="input" th:value="${input}">
+        </form>
+    </div>
+    <p class="responseText" id="responseText" th:text="${response}"></p>
+</div>
+
+<script>
+
+    function onSubmit() {
+        document.getElementById("loadingMessage").style.display = "block";
+        document.getElementById("aMimir").style.display = "none";
+        document.getElementById("input").style.display = "none";
+    }
+</script>
+
+
+</body>
+</html>
