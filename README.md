@@ -3,9 +3,7 @@
 
 ### Sobre
 
-Essa é uma aplicação de RAG na prática que combina inteligência artificial com processamento e armazenar embeddings em um banco
-
-de dados PostgreSQL usando a extensão pgAI. Com isso, é possível realizar uma busca por similaridade (similarity search)
+Essa é uma aplicação de RAG na prática que combina inteligência artificial com processamento e armazenamento de embeddings em um banco de dados PostgreSQL usando a extensão pgAI. Com isso, é possível realizar uma busca por similaridade (similarity search)
 para recuperar informações relevantes de documentos armazenados no banco de dados utilizando i.a para gerar respostas coerentes com base nos dados recuperados.
 
 ### Objetivo
