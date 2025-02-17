@@ -22,7 +22,7 @@ Aplicação de RAG na prática, LLM, similarity search... Para seus diversos tip
 - Promover a adoção de tecnologias de IA em pequenas empresas;
 - Obter respostas refinadas em uma grande base de documentos.
 
-ps. O Spring AI abstraiu muitos básicos conceitos, é importante buscar conhecimento teorico, ler a [documentação](https://docs.spring.io/spring-ai/reference/concepts.html)
+ps. O Spring AI abstraiu muitos conceitos básicos, é importante buscar conhecimento teorico, ler a [documentação](https://docs.spring.io/spring-ai/reference/concepts.html)
 e entender o que está sendo feito 'debaixo dos panos'.
 
 ### Tecnologias
