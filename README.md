@@ -1,17 +1,16 @@
 <br/>
-<h3 style="text-align: center;">POC - OLLAMA COM RAG</h3>
+<h3 style="text-align: center;">Aplicação de RAG na prática com SPRING IA</h3>
 
 ### Sobre
 
-Essa é uma POC (proof of concept) que combina inteligência artificial com processamento e armazenar embeddings em um banco 
-de dados PostgreSQL usando a extensão pgAI. Com isso, é possível realizar uma busca por similaridade (similarity search),
-para recuperar informações relevantes de documentos armazenados no banco de dados retornar dados e utilizamos i.a para 
-gerar respostas coerentes com base nos dados recuperados.
+Essa é uma aplicação de RAG na prática que combina inteligência artificial com processamento e armazenar embeddings em um banco
+
+de dados PostgreSQL usando a extensão pgAI. Com isso, é possível realizar uma busca por similaridade (similarity search)
+para recuperar informações relevantes de documentos armazenados no banco de dados utilizando i.a para gerar respostas coerentes com base nos dados recuperados.
 
 ### Objetivo
 
-Estudo prático de teorico de RAG, LLM, similarity search... É possível desenvolver essa POC para utilização pessoal
- e comercial conforme exemplos:
+Aplicação de RAG na prática, LLM, similarity search... Para seus diversos tipos de uso, por exemplo:
 
 #### Acadêmico
 - Compreensão de conceitos básicos;
@@ -23,7 +22,7 @@ Estudo prático de teorico de RAG, LLM, similarity search... É possível desenv
 - Promover a adoção de tecnologias de IA em pequenas empresas;
 - Obter respostas refinadas em uma grande base de documentos.
 
-ps. O Spring AI abstraiu muitos básicos conceitos, é importante ler a [documentação](https://docs.spring.io/spring-ai/reference/concepts.html)
+ps. O Spring AI abstraiu muitos básicos conceitos, é importante buscar conhecimento teorico, ler a [documentação](https://docs.spring.io/spring-ai/reference/concepts.html)
 e entender o que está sendo feito 'debaixo dos panos'.
 
 ### Tecnologias
@@ -36,7 +35,7 @@ e entender o que está sendo feito 'debaixo dos panos'.
 
 ### Configurações
 
-- LLM llama3.2 (1 bilhão de parâmetros);
+- LLM llama3.2 (7 bilhões de parâmetros);
 - Embedding default do Spring AI (Mistral);
 - Embedding dimensions: 1024
 

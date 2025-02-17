@@ -51,7 +51,7 @@
             display: flex;
             flex-direction: column;
         }
-        .output {
+        .input {
             display: flex;
             padding: 10px;
             box-sizing: border-box;
@@ -74,7 +74,6 @@
             margin-left: 4px;
         }
         .loading{
-            position: absolute;
             display: none;
         }
         .responseText{
@@ -119,13 +118,12 @@
         </div>
     </div>
 
-    <div class="output">
-        <span id="aMimir">A I.A está a mimir 😴...</span>
+    <div class="input">
         <span class="loading" id="loadingMessage">
-            Seu pc é lento... Aguarde 🤓💻...
+            Wait a minute 🤓💻...
         </span>
         <form th:action="@{/chat}" method="post" onsubmit="onSubmit()">
-            <input class="terminalInput" name="input" id="input" th:value="${input}">
+            <input class="terminalInput" placeholder="Type here... e.g what is an invertebrate?" name="input" id="input" th:value="${input}" autofocus>
         </form>
     </div>
     <p class="responseText" id="responseText" th:text="${response}"></p>
@@ -134,8 +132,7 @@
 <script>
 
     function onSubmit() {
-        document.getElementById("loadingMessage").style.display = "block";
-        document.getElementById("aMimir").style.display = "none";
+        document.getElementById("loadingMessage").style.display = "flex";
         document.getElementById("input").style.display = "none";
     }
 </script>
